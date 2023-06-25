@@ -30,17 +30,21 @@ struct Node
 //////////////////////////////////////////////////////////////////////////////
 class Solution
 {
-    public:
+    public:  // learned by apni collge
     //Function to reverse a linked list.
     struct Node* reverseList(struct Node *head)
-    {
-        Node * currptr=head;
+    {  
+        // there is anotherr recursive approach for this 
+        // in this approach
+        
+        Node * currptr=head;  // initalized to head
         Node * prevptr =NULL;
         Node * nextptr=NULL;
         
         while(currptr!=NULL){
-        nextptr=currptr->next;
-        currptr->next=prevptr;
+        nextptr=currptr->next; // we dont need ot update the next as it already being done in the beginnning
+        currptr->next=prevptr; //  we have to reverse all the arrows of linking 
+            // and keep mooving all the pointers in the forward direction
         prevptr=currptr;
         currptr=nextptr;
             
